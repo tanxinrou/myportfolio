@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Portfolio</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/fullpage.js/dist/fullpage.min.css">
+        <style>
+            body {
+                margin: 0;
+                font-family: Britannic, Bold, sans-serif;
+                background-image: url('image/Web 1920 – 8.png'); /* Replace with your logo image path */
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center;
+            }
+
+            /* Your existing styles for the topnav */
+            .topnav {
+                overflow: hidden;
+                background-color: #333;
+            }
+
+            .topnav a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+            .topnav a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+
+            .topnav a.active {
+                background-color: #FECFC2;
+                color: white;
+            }
+
+            /* CSS Grid for the logo and title */
+            .container {
+                display: grid;
+                grid-template-rows: 1fr 1fr; /* Two equal rows */
+            }
+
+
+            #title {
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            /* Next & previous buttons */
+            .prev, .next {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                padding: 16px;
+                margin-top: 0px;
+                color: white;
+                font-weight: bold;
+                font-size: 18px;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+            }
+
+            /* Position the "next button" to the right */
+            .next {
+                right: 0;
+                border-radius: 3px 0 3px;
+                margin-right: 850px;
+            }
+
+            /* On hover, add a black background color with a little bit see-through */
+            .prev:hover, .next:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+
+            /* Number text (1/10 etc) */
+            .numbertext {
+                color: #f2f2f2;
+                font-size: 12px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 10;
+            }
+
+            /* CSS Grid styles */
+
+
+            /* Move the slideshow to the left grid box */
+            .slideshow-container {
+                max-width: 100%;
+                max-height: 500px;
+                position: relative;
+                margin: auto;
+                margin-top: 120px;
+            }
+
+
+            /* Position the "next button" to the right */
+            .next {
+                right: 0;
+                margin-right: -270px; /* Adjust as needed */
+
+            }
+
+            .secound-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr; /* Two equal columns */
+                gap: 20px;
+                padding: 20px;
+                align-items: right;
+                justify-content: right;
+                background-color: #d7afa4;
+                height: 750px;
+                width: 2439px;
+                margin-top: 30px;
+                margin-left: 100px;
+            }
+
+
+            .carousel-item img {
+                width: 100%; /* Adjust as needed */
+                height: auto;
+            }
+
+            .experiences-box {
+                background-color: rgba(300, 255, 265, 0.5);
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                margin: 20px auto; /* Center the box horizontally */
+                max-width: 800px; /* Set maximum width */
+            }
+
+            #me {
+                font-size: 18px; /* Adjust font size */
+                margin-bottom: 20px; /* Bottom margin for content */
+            }
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+                gap: 20px;
+                padding: 20px;
+
+            }
+
+
+            #carousel1,
+            #carousel2 {
+                max-width: 400px; /* Adjust the width of the carousels */
+                margin: auto;
+            }
+
+            .carousel-set-1 {
+                background-color: #f0f0f0; /* Adjust the color as needed */
+                padding: 20px;
+            }
+
+            .carousel-set-2 {
+                background-color: #d7afa4; /* Adjust the color as needed */
+                padding: 20px;
+            }
+
+            /* Adjusted styles for carousels */
+            .carousel-description {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                max-width: 100%; /* Adjust the width of each carousel */
+                margin: auto;
+            }
+
+        .description {
+            text-align: center;
+            width: 100%; /* Set width to 100% */
+            max-width: 100%; /* Also set max-width to 100% */
+        }
+        #carousel1 {
+    max-width: 100%; /* Increase the width to enlarge carousel1 */
+    max-width: 100%;
+    margin: auto;
+}
+
+        </style>
+    </head>
+    <body>
+
+        <div class="topnav">
+            <a href="index.html">Home</a>
+            <a  href="about.html">About</a>
+            <a class="active" href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <h1 id='title'>OUTSIDE SCHOOL WORK</h1>
+
+        <div class="grid-container">
+            <!-- First Carousel and Description with background color set -->
+            <div class="carousel-set-1">
+                <div class="carousel-description">
+                    <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="image/osw/Image_20231109203048.jpg" alt="Image 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="image/osw/Image_20231109203123.jpg" alt="Image 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="image/osw/Image_20231109203130.jpg" alt="Image 3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="image/osw/Image_20231109203138.jpg" alt="Image 4">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="image/osw/Image_20231109203143.jpg" alt="Image 5">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="image/osw/Image_20231109203150.jpg" alt="Image 6">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="image/osw/cheng.jpg" alt="Image 7">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="image/osw/chou.jpg" alt="Image 8">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="image/osw/chuan.jpg" alt="Image 9">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="image/osw/tuyile.jpg" alt="Image 10">
+                            </div>
+
+                            
+                            <!-- Add more carousel items as needed -->
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="description">
+                    <div class="experiences-box">
+                        <div class="content">
+                            <p id="me">This is "kelaMain" an application related to live streaming in China. In this software, the broadcasters are usually singing hosts. I work on this software to create cover and background images to be placed in their live rooms</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Carousel and Description with background color set -->
+            <div class="carousel-set-2">
+                <div class="carousel-description">
+                    <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="image/osw/Image_20240108022421.jpg" alt="Image 1">
+                            </div>
+                            <!-- Add more carousel items as needed -->
+
+
+                    </div>
+                </div>
+                <div class="description">
+                    <div class="experiences-box">
+                        <div class="content">
+                            <p id="me">This is a vertical banner that I designed for ATA Event & Vacation Hub, a travelling company, this banner is being displayed in shenzhen's travel Exhibition in Dec of 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+
+        </script>   
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+        <script src="https://unpkg.com/fullpage.js/dist/fullpage.min.js"></script>
+        <script src="aboutanimation.js"></script>
+        <script src="aboutfullpage.js"></script>
+
+    </body>
+</html>
